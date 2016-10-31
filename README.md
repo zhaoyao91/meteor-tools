@@ -14,6 +14,7 @@ COPY . /src
 
 RUN /tools/build_app.sh /src /app
 RUN /tools/prepare_app.sh /app
+RUN /tools/cleanup.sh && rm -rf /src
 
 CMD /tools/run_app.sh /app
 
